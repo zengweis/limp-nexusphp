@@ -11,4 +11,6 @@ sudo apt install php8.0-fileinfo
 PHP出错
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
+若无法找到 libssl 软件包，使用
+sudo apt install libssl-dev
 
