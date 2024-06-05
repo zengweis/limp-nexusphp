@@ -23,14 +23,6 @@ else
   }
 
 
-  # 更新 apt 并检查安装源
-  echo "正在更新 apt 并检查安装源..."
-  sudo apt update
-  if [ $? -ne 0 ]; then
-    echo "更新 apt 失败或无法访问安装源，请检查网络连接或安装源配置！"
-    exit 1
-  fi
-  progress_bar 100
 
   # 安装 LNMP
   echo "正在安装 LNMP..."
@@ -38,10 +30,7 @@ else
   # 安装 Nginx
   echo "正在安装 Nginx..."
   sudo apt install -y nginx
-  if [ $? -ne 0 ]; then
-    echo "安装 Nginx 失败！请检查网络连接或安装源配置！"
-    exit 1
-  fi
+ 
   progress_bar 100
 
   # 配置 Nginx
@@ -59,11 +48,8 @@ else
 
   # 安装 PHP 8.0
   echo "正在安装 PHP 8.0..."
-  sudo apt install -y php8.0 php8.0-cli php8.0-common php8.0-fpm php8.0-mysql php8.0-xml php8.0-mbstring php8.0-curl php8.0-gd php8.0-zip php8.0-bcmath php8.0-intl
-  if [ $? -ne 0 ]; then
-    echo "安装 PHP 8.0 失败！请检查网络连接或安装源配置！"
-    exit 1
-  fi
+  sudo apt install php8.0 php8.0-cli php8.0-common php8.0-fpm php8.0-mysql php8.0-xml php8.0-mbstring php8.0-curl php8.0-gd php8.0-zip php8.0-bcmath php8.0-intl
+、
   progress_bar 100
 
   # 配置 PHP-FPM
@@ -80,10 +66,7 @@ else
   # 安装 MySQL
   echo "正在安装 MySQL..."
   sudo apt install -y mysql-server
-  if [ $? -ne 0 ]; then
-    echo "安装 MySQL 失败！请检查网络连接或安装源配置！"
-    exit 1
-  fi
+ 
   progress_bar 100
 
   # 配置 MySQL 并设置密码
@@ -106,10 +89,7 @@ else
   # 安装 Redis
   echo "正在安装 Redis..."
   sudo apt install -y redis-server
-  if [ $? -ne 0 ]; then
-    echo "安装 Redis 失败！请检查网络连接或安装源配置！"
-    exit 1
-  fi
+
   progress_bar 100
 
   # 配置 Redis
@@ -131,10 +111,7 @@ else
   if [ $? -ne 0 ]; then
     echo "fileinfo 扩展安装失败！"
     sudo apt install -y php8.0-fileinfo
-    if [ $? -ne 0 ]; then
-      echo "安装 fileinfo 扩展失败！请检查网络连接或安装源配置！"
-      exit 1
-    fi
+    
   fi
   progress_bar 100
 
