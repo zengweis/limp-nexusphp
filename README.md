@@ -7,3 +7,8 @@ sudo apt update
 然后尝试再次安装 php8.0-fileinfo：
 sudo apt install php8.0-fileinfo
 
+
+PHP出错
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+
