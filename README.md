@@ -1,0 +1,1 @@
+这是适用于nexusephp的lnmp环境脚本
