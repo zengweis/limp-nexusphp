@@ -4,8 +4,8 @@ mysql进入后create database `nexusphp` default charset=utf8mb4 collate utf8mb4
 配置web http，打开nginx 配置目录（一般为 /etc/nginx/conf.d/）下新增一个 nexusphp.conf
 
 输入配置，记得按实际更改
-server {
 
+server {
     # 以实际为准
     root /RUN_PATH; 
 
